@@ -6,11 +6,12 @@ package tpm2i.Model;
 
 /**
  *
- * @author N Duquesne
+ * @author L. Moreaux
  */
 public class User {
     
-    private long id;
+    // Properties
+    private Long id;
     private String userId;
     private String firstName;
     private String lastName;
@@ -18,7 +19,7 @@ public class User {
     private String login;
     private String password;
     
-    //Constructor without parameters
+    // Constructor without parameters
     public User(){
         
     }
@@ -53,7 +54,6 @@ public class User {
     }
     
     // Setters
-
     public void setId(long id) {
         this.id = id;
     }
@@ -81,6 +81,4 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-    
-   
 }
