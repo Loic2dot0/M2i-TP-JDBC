@@ -10,9 +10,9 @@ package tpm2i.Model;
  */
 public class Provider {
     private Long id;
-    private String idNumber;
+    private String providerId;
     private String name;
-    private String email;
+    private String mail;
     private String adress;
     
     public Provider(){}
@@ -26,11 +26,11 @@ public class Provider {
     }
 
     public String getIdNumber() {
-        return idNumber;
+        return providerId;
     }
 
     public void setIdNumber(String idNumber) {
-        this.idNumber = idNumber;
+        this.providerId = idNumber;
     }
 
     public String getName() {
@@ -42,11 +42,11 @@ public class Provider {
     }
 
     public String getEmail() {
-        return email;
+        return mail;
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.mail = email;
     }
 
     public String getAdress() {

@@ -10,7 +10,7 @@ package tpm2i.Model;
  */
 public class Client {
     private Long id;
-    private String numberClient;
+    private String clientId;
     private String lastName;
     private String firstName;
     private String mail;
@@ -40,14 +40,14 @@ public class Client {
      * @return the numberClient
      */
     public String getNumberClient() {
-        return numberClient;
+        return clientId;
     }
 
     /**
      * @param numberClient the numberClient to set
      */
     public void setNumberClient(String numberClient) {
-        this.numberClient = numberClient;
+        this.clientId = numberClient;
     }
 
     /**

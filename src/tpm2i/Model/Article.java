@@ -10,7 +10,7 @@ package tpm2i.Model;
  */
 public class Article {
     private Long id;
-    private String idNumber;
+    private String articleId;
     private String name;
     private String description;
     private Boolean isForSell;
@@ -26,11 +26,11 @@ public class Article {
     }
 
     public String getIdNumber() {
-        return idNumber;
+        return articleId;
     }
 
     public void setIdNumber(String idNumber) {
-        this.idNumber = idNumber;
+        this.articleId = idNumber;
     }
 
     public String getName() {
