@@ -4,7 +4,6 @@
  */
 package tpm2i.DAO;
 import java.util.List;
-import tpm2i.Model.Client;
 import tpm2i.DAO.DataBase;
 import java.sql.*;
 import java.util.ArrayList;
@@ -16,7 +15,6 @@ import tpm2i.Model.Client;
  *
  * @author phili
  */
-public class ClientDAO {
     public class ClientDAO implements Iconfig{
     
     private Client client = new Client();
@@ -28,8 +26,8 @@ public class ClientDAO {
      public void add() {
         
          String sql = "INSERT INTO CLIENT (clientId, lastName, firstName, mail, adress)VALUES "
-                 + "(" + client.getNumberClient() + ",'" + client.getLastName() +"'"
-                 + "," + client.getFirstName()+ ",'"  +  client.getMail() +  ",'" + client.getAdress() +  "')";
+                 + "('" + client.getNumberClient() + "','" + client.getLastName() +"'"
+                 + ",'" + client.getFirstName()+ "','"  +  client.getMail() +  ",'" + client.getAdress() +  "')";
          db.insert(sql);
          
     }
@@ -42,7 +40,7 @@ public class ClientDAO {
         
     }
     
-    public List<Client> getClient() {
+    public List<Client> getClients() {
         
         String sql = "SELECT * FROM CLIENT";
         List<Client> clients = new ArrayList<>();
@@ -53,9 +51,9 @@ public class ClientDAO {
             ResultSet res = resArray.get(0);
             while(res.next()) {
                 Client client = new Client();
-                client.setNumberClient(res.getString("ClientId"));
-                client.setLastName(res.getString("LastName"));
-                client.setFirstName(res.getString("FirstName"));
+                client.setNumberClient(res.getString("clientId"));
+                client.setLastName(res.getString("lastName"));
+                client.setFirstName(res.getString("firstName"));
                 client.setMail(res.getString("mail"));
                 client.setAdress(res.getString("adress"));
                 clients.add(client);
@@ -69,7 +67,7 @@ public class ClientDAO {
         return clients;
     }
     
-    /*public Article getProviderById(Integer idNumber) {
+    /*public Client getProviderById(Integer idNumber) {
         
     }*/
 
@@ -77,10 +75,10 @@ public class ClientDAO {
         return client;
     }
 
-    public void setArticle(Client client) {
+    public void setClient(Client client) {
         this.client = client;
     }
 }
 
     
-}
+
