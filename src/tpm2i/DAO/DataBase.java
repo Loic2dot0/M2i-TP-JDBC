@@ -58,7 +58,7 @@ public class DataBase implements Iconfig, IDataBase{
     public void insert(String sql) {
         try {
              Class.forName("com.mysql.cj.jdbc.Driver");
-             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306?useSSL=false", "root", "Ovbt9,yvzdMjollnir");
+             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306?useSSL=false", dbUser, dbPassword);
              Statement stmt = conn.createStatement();
              stmt.executeUpdate(str2);
              stmt.executeUpdate(sql);
