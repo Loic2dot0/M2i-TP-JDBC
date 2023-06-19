@@ -28,7 +28,7 @@ public class ArticleDAO implements Iconfig{
     public ArticleDAO(){};
     
     
-     public void add() {
+     public void add(Article article) {
         
          String sql = "INSERT INTO ARTICLE (articleId, name, isforsell, description)VALUES "
                  + "('" + article.getIdNumber() + "','" + article.getName() +"'"

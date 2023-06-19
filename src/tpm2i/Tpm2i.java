@@ -20,6 +20,8 @@ public class Tpm2i {
         // TODO code application logic here
         MainMenu mainMenu = new MainMenu();
         mainMenu.start();
+        //mainMenu.insertArticle();
+        mainMenu.getArticles();
     }
     
 }
