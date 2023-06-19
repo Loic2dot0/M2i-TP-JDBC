@@ -8,6 +8,9 @@ package tpm2i;
  *
  * @author Loïc
  */
+
+import tpm2i.Main.MainMenu;
+        
 public class Tpm2i {
 
     /**
@@ -15,6 +18,8 @@ public class Tpm2i {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        MainMenu mainMenu = new MainMenu();
+        mainMenu.start();
     }
     
 }
