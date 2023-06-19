@@ -14,9 +14,6 @@ import tpm2i.Model.User;
 import java.sql.*;
 import java.util.ArrayList;
 import tpm2i.Config.Iconfig;
-import static tpm2i.Config.Iconfig.dbPassword;
-import static tpm2i.Config.Iconfig.dbUser;
-import tpm2i.Model.Article;
 
 public class UserDAO implements Iconfig{
 
