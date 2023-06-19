@@ -9,6 +9,6 @@ package tpm2i.Config;
  * @author N Duquesne
  */
 public interface Iconfig {
-    final public String dbPassword = "";
-    final public String dbUser = "";
+    final public String dbPassword = "Ovbt9,yvzdMjollnir";
+    final public String dbUser = "user";
 }
