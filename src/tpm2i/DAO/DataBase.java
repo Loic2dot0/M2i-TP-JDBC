@@ -32,6 +32,7 @@ public class DataBase implements Iconfig, IDataBase{
     
     public void create() {
         try {
+            System.out.println(dbUser + dbPassword);
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306?useSSL=false", dbUser, dbPassword );
             Statement stmt = conn.createStatement();

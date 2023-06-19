@@ -8,9 +8,8 @@ package tpm2i.DAO;
  *
  * @author N Duquesne
  */
-import java.util.HashMap;
+
 import java.util.List;
-import java.util.Map;
 import tpm2i.Model.Article;
 import tpm2i.DAO.DataBase;
 import java.sql.*;
@@ -31,8 +30,8 @@ public class ArticleDAO implements Iconfig{
     
      public void add() {
         
-         String sql = "INSERT INTO ARTICLE (idNumber, name, isforsell, description)VALUES "
-                 + "(" + article.getIdNumber() + ",'" + article.getName() +"'"
+         String sql = "INSERT INTO ARTICLE (articleId, name, isforsell, description)VALUES "
+                 + "('" + article.getIdNumber() + "','" + article.getName() +"'"
                  + "," + article.getIsForSell()+ ",'"  +  article.getDescription() + "')";
          db.insert(sql);
          

@@ -8,6 +8,16 @@ package tpm2i.Main;
  *
  * @author N Duquesne
  */
+
+import tpm2i.DAO.DataBase;
+
 public class MainMenu {
+    
+    public MainMenu() {};
+    
+    public void start() {
+        DataBase db = new DataBase();
+        db.create();
+    }
     
 }
