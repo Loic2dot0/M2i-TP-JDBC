@@ -48,8 +48,7 @@ public class ProviderDAO implements Iconfig{
         
         try {
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306?useSSL=false", dbUser, dbPassword);
-            List<ResultSet> resArray = db.getDatas(sql, conn);
-            ResultSet res = resArray.get(0);
+            ResultSet res = db.getDatas(sql, conn);
             while(res.next()) {
                 Provider provider = new Provider();
                 provider.setIdNumber(res.getString("articleId"));

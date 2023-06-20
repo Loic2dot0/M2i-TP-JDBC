@@ -52,8 +52,7 @@ public class ArticleDAO implements Iconfig{
         
         try {
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306?useSSL=false", dbUser, dbPassword);
-            List<ResultSet> resArray = db.getDatas(sql, conn);
-            ResultSet res = resArray.get(0);
+            ResultSet res = db.getDatas(sql, conn);
             while(res.next()) {
                 Article article = new Article();
                 article.setIdNumber(res.getString("articleId"));

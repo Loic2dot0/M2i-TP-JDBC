@@ -46,9 +46,8 @@ import tpm2i.Model.Client;
         List<Client> clients = new ArrayList<>();
         
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306?useSSL=false", "root", dbPassword);
-            List<ResultSet> resArray = db.getDatas(sql, conn);
-            ResultSet res = resArray.get(0);
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306?useSSL=false", dbUser, dbPassword);
+            ResultSet res = db.getDatas(sql, conn);
             while(res.next()) {
                 Client client = new Client();
                 client.setNumberClient(res.getString("clientId"));

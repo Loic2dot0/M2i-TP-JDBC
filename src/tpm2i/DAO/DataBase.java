@@ -71,21 +71,20 @@ public class DataBase implements Iconfig, IDataBase{
     }
     
     
-    public List getDatas(String sql, Connection conn) {
-        List<ResultSet> arr = new ArrayList();
+    public ResultSet getDatas(String sql, Connection conn) {
+        ResultSet res = null;
         
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Statement stmt = conn.createStatement();
             stmt.executeUpdate(str2);
-            ResultSet res = stmt.executeQuery(sql);
-            arr.add( res);
+            res = stmt.executeQuery(sql);
         }
         catch (ClassNotFoundException | SQLException e){
             System.out.println(e);
         }
     
-    return arr;
+    return res;
        
     }
 }
