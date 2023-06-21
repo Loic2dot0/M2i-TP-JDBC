@@ -22,6 +22,9 @@ public class Tpm2i {
         mainMenu.start();
         //mainMenu.insertArticle();
         mainMenu.getArticles();
+        
+        //mainMenu.insertClient();
+        mainMenu.getClients();
     }
     
 }

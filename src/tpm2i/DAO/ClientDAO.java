@@ -17,17 +17,16 @@ import tpm2i.Model.Client;
  */
     public class ClientDAO implements Iconfig{
     
-    private Client client = new Client();
     private DataBase db = new DataBase();
     
     public ClientDAO(){};
     
     
-     public void add() {
+     public void add(Client client) {
         
-         String sql = "INSERT INTO CLIENT (clientId, lastName, firstName, mail, adress)VALUES "
+         String sql = "INSERT INTO CLIENT (clientId, lastName, firstName, mail, address)VALUES "
                  + "('" + client.getNumberClient() + "','" + client.getLastName() +"'"
-                 + ",'" + client.getFirstName()+ "','"  +  client.getMail() +  ",'" + client.getAdress() +  "')";
+                 + ",'" + client.getFirstName()+ "','"  +  client.getMail() +  "','" + client.getAdress() +  "')";
          db.insert(sql);
          
     }
@@ -54,7 +53,7 @@ import tpm2i.Model.Client;
                 client.setLastName(res.getString("lastName"));
                 client.setFirstName(res.getString("firstName"));
                 client.setMail(res.getString("mail"));
-                client.setAdress(res.getString("adress"));
+                client.setAdress(res.getString("address"));
                 clients.add(client);
             }
             
@@ -69,14 +68,6 @@ import tpm2i.Model.Client;
     /*public Client getProviderById(Integer idNumber) {
         
     }*/
-
-    public Client getClient() {
-        return client;
-    }
-
-    public void setClient(Client client) {
-        this.client = client;
-    }
 }
 
     
